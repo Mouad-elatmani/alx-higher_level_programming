@@ -47,8 +47,13 @@ class Rectangle:
     def __str__(self):
         if (self.width == 0 or self.height == 0):
             return ""
-        return (((str(Recrangle.print_symbol) * self.width) + '\n') * self.height)[:-1]
-
+        string = ""
+        for i in range(self.__height):
+            string += (str(Rectangle.print_symbol) * self.__width)
+            if i != self.__height - 1:
+                string += "\n"
+        return string
+    
     def __repr__(self):
         """Print the rectangle using eval"""
         return "Rectangle({}, {})".format(self.width, self.height)
