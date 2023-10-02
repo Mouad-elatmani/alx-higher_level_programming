@@ -46,6 +46,7 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
+        """Return a new Rectangle with width and height equal to size."""
         return (cls(size, size))
 
     def __str__(self):
