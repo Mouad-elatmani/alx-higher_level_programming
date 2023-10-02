@@ -48,12 +48,12 @@ class Rectangle:
         if (self.width == 0 or self.height == 0):
             return ""
         string = ""
-        for i in range(self.__height):
-            string += (str(Rectangle.print_symbol) * self.__width)
+        for i in range(self.height):
+            string += (str(self.print_symbol) * self.width)
             if i != self.__height - 1:
                 string += "\n"
         return string
-    
+
     def __repr__(self):
         """Print the rectangle using eval"""
         return "Rectangle({}, {})".format(self.width, self.height)
