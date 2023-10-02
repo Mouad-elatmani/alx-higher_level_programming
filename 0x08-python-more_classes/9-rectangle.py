@@ -12,10 +12,6 @@ class Rectangle:
         self.__height = height
         Rectangle.number_of_instances += 1
 
-    @classmethod
-    def square(cls, size=0):
-        return cls(size, size)
-
     @property
     def width(self):
         return self.__width
@@ -47,6 +43,10 @@ class Rectangle:
         if (self.height != 0 and self.width != 0):
             return 2 * (self.height + self.width)
         return 0
+
+    @classmethod
+    def square(cls, size=0):
+        return cls(size, size)
 
     def __str__(self):
         if (self.width == 0 or self.height == 0):
