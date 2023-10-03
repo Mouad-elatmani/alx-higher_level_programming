@@ -1,0 +1,24 @@
+======================
+5-text_indentation
+======================
+
+text_indentation  This is an text_indentation test file
+
+=====================
+
+
+        >>> text_indentation = __import__('5-text_indentation').text_indentation
+       
+        >>> text_indentation(1)
+        Traceback (most recent call last):
+        TypeError: text must be a string
+
+        >>> text_indentation()
+        Traceback (most recent call last):
+        TypeError: text must be a string
+
+        >>> text_indentation("hello, my name is: X.")
+        hello, my name is:
+        <BLANKLINE>
+        X.
+        <BLANKLINE>
