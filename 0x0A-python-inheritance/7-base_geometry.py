@@ -3,6 +3,7 @@
 
 
 class BaseGeometry:
+     """BaseGeometry Calss"""
     def area(self):
         raise Exception("area() is not implemented")
 
