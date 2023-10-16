@@ -37,3 +37,12 @@ class Base:
         js_str = cls.to_json_string(new_list)
         with open(filename, 'w', encoding='utf-8') as file:
             file.write(js_str)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """function that writes an Object to a text file,
+        using a JSON representation"""
+
+        if json_string is None or json_string == "":
+            return []
+        return json.loads(json_string)
