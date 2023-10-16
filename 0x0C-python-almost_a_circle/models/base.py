@@ -59,3 +59,16 @@ class Base:
         instance.update(**dictionary)
 
         return instance
+
+    @classmethod
+    def load_from_file(cls):
+        filename = cls.__name__ + ".json"
+        new_list = []
+        try:
+            with open(filename, "r", encoding='utf-8') as file:
+                json_load = cls.from_json_string(file.read())
+                for item in json_load:
+                    new_list.append(cls.create(**item))
+                return new_list
+        except FileNotFoundError:
+            return []
