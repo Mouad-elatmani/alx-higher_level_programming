@@ -90,3 +90,14 @@ class Rectangle(Base):
         """return returns [Rectangle] (<id>) <x>/<y> - <width>/<height> """
         return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - "\
             f"{self.__width}/{self.__height}"
+
+    def display(self):
+        """Width."""
+        for y in range(self.__y):
+            print()
+        for h in range(self.__height):
+            for x in range(self.__x):
+                print(" ", end="")
+            for w in range(self.__width):
+                print("#", end="")
+            print()
