@@ -101,3 +101,28 @@ class Rectangle(Base):
             for w in range(self.__width):
                 print("#", end="")
             print()
+
+    def update(self, *args):
+        """ update """
+
+        list = [self.id, self.__width, self.__height, self.__x, self.__y]
+        for x, arg in enumerate(args):
+            list[x] = arg
+            if x == 4:
+                break
+
+        super().__init__(list[0])
+        self.width = list[1]
+        self.height = list[2]
+        self.x = list[3]
+        self.y = list[4]
+
+    def update(self, *args, **kwargs):
+        """Width."""
+        if args:
+            attribute_names = ['id', 'width', 'height', 'x', 'y']
+            for attribute_name, value in zip(attribute_names, args):
+                setattr(self, attribute_name, value)
+        else:
+            for key, value1 in kwargs.items():
+                setattr(self, key, value1)
