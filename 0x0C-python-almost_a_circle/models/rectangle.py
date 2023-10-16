@@ -6,8 +6,12 @@ from models.base import Base
 
 
 class Rectangle(Base):
-
+    """
+    This class allows you to create and manipulate Rectangle objects.
+    Each Rectangle is defined by its width and height
+    """
     def __init__(self, width, height, x=0, y=0, id=None):
+         """Initialize a new Rectangle."""
         super().__init__(id)
         self.width = width
         self.height = height
