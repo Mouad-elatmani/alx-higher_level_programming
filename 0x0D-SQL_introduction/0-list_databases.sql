@@ -1,2 +1,2 @@
---show lise of database in our system
-show DATABASES;
+--show liste of all database in our server
+SHOW DATABASES;
