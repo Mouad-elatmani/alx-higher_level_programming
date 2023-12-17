@@ -17,4 +17,4 @@ def execute_cmd(username, password, dbname):
 
 if __name__ == "__main__":
     username, password, dbname = sys.argv[1], sys.argv[2], sys.argv[3]
-    execute_query(username, password, dbname)
+    execute_cmd(username, password, dbname)
