@@ -12,7 +12,7 @@ def main():
     cur.execute("SELECT * FROM states ORDER BY states.id ASC")
     rows = cur.fetchall()
     for i in rows:
-        print(row)
+        print(i)
     cur.close()
     conn.close()
 
