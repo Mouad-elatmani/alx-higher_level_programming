@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Imports modules"""
 import sys
 import MySQLdb
 
@@ -14,7 +15,7 @@ def main():
     cur.execute(temp)
     rows = cur.fetchall()
     for i in rows:
-        print(rows)
+        print(i)
 
     cur.close()
     conn.close()
