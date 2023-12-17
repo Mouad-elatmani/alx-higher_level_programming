@@ -10,8 +10,8 @@ def main():
     conn = MySQLdb.connect(host="localhost", port=3306, user=usern,
                            passwd=pswd, db=dbname, charset="utf8")
     cur = conn.cursor()
-    temp = f"SELECT * FROM states WHERE name LIKE BINARY '{search}'\
-            ORDER BY states.id ASC"
+    temp = f"SELECT * FROM states WHERE name LIKE BINARY '{}'\
+            ORDER BY states.id ASC".format(search)
     cur.execute(temp)
     rows = cur.fetchall()
     for i in rows:
