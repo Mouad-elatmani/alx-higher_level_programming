@@ -11,9 +11,10 @@ def main():
     conn = MySQLdb.connect(host="localhost", port=3306, user=usern,
                            passwd=pswd, db=dbname, charset="utf8")
     cur = conn.cursor()
-    temp = "SELECT name FROM cities where cities.id = (SELECT\
-            id from states where name = %s)"
-    cur.execute(temp, (search,))
+    temp = f"""SELECT cities.name FROM cities
+    INNER JOIN states ON cities.state_id = states.id
+    WHERE states.name = '{search}' ORDER BY cities.id"""
+    cur.execute(temp)
     rows = cur.fetchall()
     data = ''
     for i in rows:
