@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+"""fetch alll"""
 import sys
 from model_state import Base, State
 from sqlalchemy import (create_engine, text)
